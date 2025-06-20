@@ -2,8 +2,8 @@ from django.db import models
 
 class Question(models.Model):
     text = models.CharField(max_length=100)
-    group = models.IntegerField()  # 1–4
-    solution_name = models.CharField(max_length=100)  # например, "Фрукты"
+    group = models.IntegerField()
+    solution_name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.text

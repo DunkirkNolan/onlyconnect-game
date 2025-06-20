@@ -31,7 +31,7 @@ def reset_game(request):
     state, _ = GameState.objects.get_or_create(id=1)
     state.cards = []
     state.timer_started_at = None
-    state.timer_stopped = False  # ⬅️ Сбрасываем
+    state.timer_stopped = False
     state.save()
     return Response({"status": "reset"})
 
